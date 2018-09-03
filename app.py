@@ -14,7 +14,7 @@ def main(query=1):
 	if query.isdigit():
 		line = 'The pokemon with id ' + str(info['id']) + ' is ' + info['name']
 		return render_template('index.html', line=line)
-	line = info['name'] + ' has' + ' id ' + str(info['id'])
+	line = info['name'].capitalize() + ' has' + ' id ' + str(info['id'])
 	return render_template('index.html', line=line)
 
 
